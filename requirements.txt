@@ -1,4 +1,1 @@
 Django
-Python
-HTML
-CSS
