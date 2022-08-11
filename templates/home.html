@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-family: 'Times New Roman', Times, serif; font-style:oblique;">Language translator</title>
+    <link rel="icon" href="static/image/lang1.png">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/1.css' %}">
+
+</head>
+<body><div class="a">
+    <h1>
+        <center><u>Welcome to language translator</u></center>
+    </h1>
+    <center>
+    <form action="translate" method="post">
+        {% csrf_token %}
+        <select class="a1" name="lang">
+        
+            <option value="1">Select language <br>
+            <br>
+            <option value="en">English <br>
+            <br>
+            <option value="hi">Hindi<br>
+            <br>
+            <option value="bn">Bengali<br>
+            <br>
+            <option value="af">Afrikaans <br>
+            <br>
+            <option value="sq">Albanian <br>
+            <br>
+            <option value="ar">Arabic <br>
+            <br>
+            <option value="hy">Armenian<br>
+            <br>
+            <option value="bs">Bosnian <br>
+            <br>
+            <option value="ca">Catalan <br>
+            <br>
+            <option value="hr">Croatian <br>
+            <br>
+            <option value="cs">Czech <br>
+            <br>
+            <option value="da">Danish<br>
+            <br>
+            <option value="nl">Dutch <br>
+            <br>
+            <option value="eo">Esperanto<br>
+            <br>
+            <option value="et">Estonian <br>
+            <br>
+            <option value="tl">Filipino <br>
+            <br>
+            <option value="fi">Finnish<br>
+            <br>
+            <option value="fr">French<br>
+            <br> 
+            <option value="de">German<br>
+            <br> <option value="el">Greek<br>
+            <br> <option value="gu">Gujarati<br>
+            <br> <option value="hu">Hungarian<br>
+            <br> <option value="is">Icelandic<br>
+            <br> <option value="id">Indonesian<br>
+            <br> <option value="it">Italian<br>
+            <br> <option value="ja">Japanese<br>
+            <br> <option value="jw">Javanese<br>
+            <br> <option value="kn">Kannada<br>
+            <br> <option value="km">Khmer<br>
+            <br> <option value="ko">Korean<br>
+            <br> <option value="la">Latin<br>
+            <br> <option value="lv">Latvian<br>
+            <br> <option value="mk">Macedonian<br>
+            <br> <option value="ml">Malayalam<br>
+            <br> <option value="mr">Marathi<br>
+            <br> <option value="my">Myanmar (Burmese)<br>
+            <br> <option value="ne">Nepali<br>
+            <br>  <br> <option value="no">Norwegian<br>
+            <br>  <br> <option value="pl">Polish<br>
+            <br>  <br> <option value="pt">Portuguese<br>
+            <br>  <br> <option value="ro">Romanian<br>
+            <br>  <br> <option value="ru">Russian<br>
+            <br>  <br> <option value="sr">Serbian<br>
+            <br>  <br> <option value="si">Sinhala<br>
+            <br>  <br> <option value="sk">Slovak<br>
+            <br>  <br> <option value="es">Spanish<br>
+            <br>  <br> <option value="su">Sundanese<br>
+            <br>  <br> <option value="sw">Swahili<br>
+            <br>  <br> <option value="sv">Swedish<br>
+            <br>  <br> <option value="ta">Tamil<br>
+            <br>  <br> <option value="te">Telugu<br>
+            <br>  <br> <option value="th">Thai<br>
+            <br>  <br> <option value="tr">Turkish<br>
+            <br>  <br> <option value="uk">Ukrainian<br>
+            <br>  <br> <option value="ur">Urdu<br>
+            <br>  <br> <option value="vi">Vietnamese<br>
+            <br>  <br> <option value="cy">Welsh<br>
+            <br>  <br> <option value="zh-cn">Chinese (Mandarin/China)<br>
+            <br>  <br> <option value="zh-tw">Chinese (Mandarin/Taiwan)<br>
+   
+        </select> 
+         <br>
+        <br>
+        <input type="text" class="a2" name="text1" placeholder="Enter text" required>
+        <!-- <input type="text" class="a2" name="text1"  placeholder="Translation" required> -->
+        <br><br>
+        <button class="a3">Translate</button>
+        <br>
+        <br>
+        <div class="a4">{{result}}</div>
+        <br>
+        <audio controls autoplay>
+            <source src="static/audio/exam.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+    </form>
+    </center>
+    </div>
+</body>
+</html>
